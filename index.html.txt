@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Minecraft Server Store</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: Arial;
+  background: #1e1e1e;
+  color: white;
+}
+
+/* NAVBAR */
+.nav {
+  background: #ff9800;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav h2 {
+  margin: 0;
+}
+
+.btn {
+  background: black;
+  color: orange;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 15px orange;
+}
+
+/* PLAYER BOX */
+.player-box {
+  background: orange;
+  color: black;
+  width: 200px;
+  padding: 20px;
+  border-radius: 10px;
+  position: absolute;
+  right: 20px;
+  top: 80px;
+  text-align: center;
+}
+
+/* PURCHASES */
+.purchases {
+  display: flex;
+  overflow-x: auto;
+  gap: 10px;
+  padding: 20px;
+}
+
+.card {
+  min-width: 80px;
+  height: 80px;
+  background: #333;
+  border-radius: 10px;
+}
+
+/* STORE */
+.store {
+  padding: 20px;
+}
+
+.item {
+  background: #2a2a2a;
+  padding: 15px;
+  margin: 10px;
+  border-radius: 10px;
+  display: inline-block;
+  width: 150px;
+  text-align: center;
+  transition: 0.3s;
+}
+
+.item:hover {
+  transform: scale(1.1);
+}
+
+/* BUTTON */
+.buy {
+  margin-top: 10px;
+  background: orange;
+  border: none;
+  padding: 8px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+</style>
+</head>
+
+<body>
+
+<div class="nav">
+  <h2>MineStore</h2>
+  <div class="btn">Play Now</div>
+</div>
+
+<div class="player-box">
+  <h3>ONLINE</h3>
+  <p id="players">6321 / 11000</p>
+</div>
+
+<h3 style="padding:20px;">Recent Purchases</h3>
+
+<div class="purchases">
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+  <div class="card"></div>
+</div>
+
+<div class="store">
+  <h2>Store</h2>
+
+  <div class="item">
+    <h3>VIP Rank</h3>
+    <p>₹199</p>
+    <button class="buy">Buy</button>
+  </div>
+
+  <div class="item">
+    <h3>MVP Rank</h3>
+    <p>₹399</p>
+    <button class="buy">Buy</button>
+  </div>
+
+  <div class="item">
+    <h3>King Rank</h3>
+    <p>₹799</p>
+    <button class="buy">Buy</button>
+  </div>
+
+</div>
+
+<script>
+// Fake live player counter
+setInterval(() => {
+  let num = Math.floor(Math.random() * 5000) + 5000;
+  document.getElementById("players").innerText = num + " / 11000";
+}, 3000);
+</script>
+
+</body>
+</html>
